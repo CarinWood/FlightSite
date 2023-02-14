@@ -26,10 +26,18 @@
                 <option value="Landvetter GOT">Landvetter GOT</option>
                 <option value="Kastrup CPH">Kastrup CPH</option>
                 <option value="Heathrow LHR">Heathrow LHR</option>
+                <option value="Palma de Mallorca PMI">Palma de Mallorca PMI</option>
+                <option value="Malés MLE">Malés MLE</option>
+                <option value="Barcelona BCN">Barcelona BCN</option>
+                <option value="Milano MXP">Milano MXP</option>
             </select>
 
             <select class="destinationChoice" name="" id="">
                 <option value="">Choose destination...</option>
+                <option value="Stockholm ARN">Stockholm ARN</option>
+                <option value="Landvetter GOT">Landvetter GOT</option>
+                <option value="Kastrup CPH">Kastrup CPH</option>
+                <option value="Heathrow LHR">Heathrow LHR</option>
                 <option value="Palma de Mallorca PMI">Palma de Mallorca PMI</option>
                 <option value="Malés MLE">Malés MLE</option>
                 <option value="Barcelona BCN">Barcelona BCN</option>
@@ -46,6 +54,24 @@
                 <input class="destinationDate" type="date">
             </div>
         </div>
+
+            <div class="row-5">
+
+                <div class="passanger">
+                    <input type="number" class="numberOfPassengers" min="1" placeholder="Number of passengers">
+                </div>
+                <div class="ticketClass">
+                    <select class="ticketChoseClass" name="" id="">
+                    <option value="Economy Class">Economy Class</option>
+                    <option value="Business class">Business Class</option>
+                    <option value="First class">First Class</option>
+                </select>
+                </div>
+
+
+
+
+        </div>
         <div class="row-4">
         <button onclick="showWindow()" class="booking-btn">Book</button>
         </div>
@@ -56,6 +82,9 @@
             <p class="showDestination"></p>
             <p class="showDepartureDate"></p>
             <p class="showReturnDate"></p>
+            <p class="tripDuration"></p>
+            <p class="showPassengers"></p>
+            <p class="showClass"></p>
         </div>
    
  
