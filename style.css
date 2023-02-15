@@ -19,7 +19,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  font-family: 'roboto';
+  font-family: "roboto";
   letter-spacing: 0.5px;
 }
 
@@ -73,6 +73,10 @@ select {
   flex-direction: column;
 }
 
+.row-4 {
+  position: relative;
+}
+
 .row-5 {
   margin-top: 15px;
   justify-content: flex-start;
@@ -111,6 +115,7 @@ select {
 }
 
 .booking-btn {
+  position: absolute;
   margin-top: 50px;
   border: none;
   background-color: rgb(69, 69, 158);
@@ -119,6 +124,9 @@ select {
   border-radius: 10px;
   width: 120px;
   letter-spacing: 1px;
+  top: 300px;
+  left: 250px;
+  z-index: 11;
 }
 
 /* Drop down box styling */
@@ -127,17 +135,17 @@ select {
   position: absolute;
   right: 0;
   top: 0;
-  width: 500px;
-  height: 600px;
+  width: 50%;
+  height: 90%;
   border: 2px solid black;
   border-radius: 10px;
   background-color: white;
-  opacity: 0.98;
+  opacity: 0.6;
   display: flex;
+  z-index: 10;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-
 }
 
 .drop-down-box h1 {
@@ -149,9 +157,11 @@ select {
 .drop-down-box p {
   text-align: left;
   margin-left: 100px;
+  font-weight: bold;
 }
 
-.drop-down-box button {
+.payButton button {
+  position: absolute;
   margin-top: 50px;
   border: none;
   background-color: rgb(69, 69, 158);
@@ -160,10 +170,10 @@ select {
   border-radius: 10px;
   width: 120px;
   letter-spacing: 1px;
-  margin-left: 100px;
+  top: 70%;
+  left: 60%;
+  z-index: 11;
 }
-
-
 
 @keyframes slideFromRight {
   0% {
@@ -174,9 +184,23 @@ select {
   }
 }
 
+@keyframes toneOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .slide-from-right {
   animation-name: slideFromRight;
   animation-duration: 4s;
+}
+
+.tone-Out {
+  animation-name: toneOut;
+  animation-duration: 3s;
 }
 
 .hidden {

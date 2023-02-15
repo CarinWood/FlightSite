@@ -2,10 +2,14 @@ const dropdown = document.querySelector(".drop-down-box");
 const departure = document.querySelector(".departureChoice");
 const departureDate = document.querySelector(".departureDate");
 const destination = document.querySelector(".destinationChoice");
+const destinationOptions = document.querySelectorAll(
+  ".destinationChoice option"
+);
 const returnDate = document.querySelector(".destinationDate");
 const returnDateText = document.querySelector(".return-date-text");
 const passengers = document.querySelector(".numberOfPassengers");
 const passengerClass = document.querySelector(".ticketChoseClass");
+const payButton = document.querySelector(".payButton");
 
 const paragraph = document.querySelector(".showDeparture");
 const paragraph2 = document.querySelector(".showDestination");
@@ -51,12 +55,13 @@ function showWindow() {
     return;
   }
 
+  payButton.classList.remove("hidden");
   dropdown.classList.remove("hidden");
   dropdown.classList.add("slide-from-right");
+  payButton.classList.add("tone-Out");
 
-  //flytta till array och välj vad som skrivs ut för varje loop?
-  paragraph.innerText = "From: " + departure.value;
-  paragraph2.innerText = "To: " + destination.value;
+  paragraph.innerHTML = `<div><i>From: </i> ${departure.value}</div>`;
+  paragraph2.innerHTML = "To: " + destination.value;
   paragraph3.innerText = "Departure date: " + departureDate.value;
   paragraph4.innerText = "Return date: " + returnDate.value;
   paragraph5.innerText =
@@ -70,9 +75,21 @@ function showWindow() {
   paragraph6.innerText = "Number of passengers: " + passengers.value;
   paragraph7.innerText = "Travel class: " + passengerClass.value;
   createPrice();
-  paragraph8.innerText = "Ticet Price: " + "$" + price;
+  paragraph8.innerText = "Ticket Price: " + "$" + price;
 
   //Verification
+}
+
+function setDisabled() {
+  var choice = departure.value;
+
+  for (let opt of destinationOptions) {
+    if (opt.value == choice && choice != "") {
+      opt.disabled = true;
+    } else {
+      opt.disabled = false;
+    }
+  }
 }
 
 function chooseOneWay() {
