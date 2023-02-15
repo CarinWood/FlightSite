@@ -3,6 +3,11 @@
   src: url("./assets/Skyfont-NonCommercial.otf");
 }
 
+@font-face {
+  font-family: "roboto";
+  src: url("./assets/Roboto-Regular.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +19,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  font-family: 'roboto';
+  letter-spacing: 0.5px;
 }
 
 .img {
@@ -96,6 +103,11 @@ select {
 
 #datepicker {
   z-index: 10;
+}
+
+.numberOfPassengers {
+  margin-left: 20px;
+  margin-right: -10px;
 }
 
 .booking-btn {
