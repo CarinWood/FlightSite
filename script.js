@@ -76,3 +76,7 @@ function chooseReturn() {
   returnDate.classList.remove("hidden");
   returnDateText.classList.remove("hidden");
 }
+
+function payFunc() {
+    alert('246633$ has successfully been withdrawn from your bank account. \nThank you for your purchase!')
+}

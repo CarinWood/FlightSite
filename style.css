@@ -132,7 +132,7 @@ select {
   border: 2px solid black;
   border-radius: 10px;
   background-color: white;
-  opacity: 0.9;
+  opacity: 0.98;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -150,6 +150,20 @@ select {
   text-align: left;
   margin-left: 100px;
 }
+
+.drop-down-box button {
+  margin-top: 50px;
+  border: none;
+  background-color: rgb(69, 69, 158);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 120px;
+  letter-spacing: 1px;
+  margin-left: 100px;
+}
+
+
 
 @keyframes slideFromRight {
   0% {
