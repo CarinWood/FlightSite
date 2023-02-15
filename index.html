@@ -22,7 +22,7 @@
         <div class="row-2">
             <select required class="departureChoice" name="" id="departureid">
                 <option value="">Choose depature...</option>
-                <option value="Stockholm ARN">Stockholm ARN</option>
+                <option selected value="Stockholm ARN">Stockholm ARN</option>
                 <option value="Landvetter GOT">Landvetter GOT</option>
                 <option value="Kastrup CPH">Kastrup CPH</option>
                 <option value="Heathrow LHR">Heathrow LHR</option>
@@ -35,7 +35,7 @@
             <select class="destinationChoice" name="" id="">
                 <option value="">Choose destination...</option>
                 <option value="Stockholm ARN">Stockholm ARN</option>
-                <option value="Landvetter GOT">Landvetter GOT</option>
+                <option selected value="Landvetter GOT">Landvetter GOT</option>
                 <option value="Kastrup CPH">Kastrup CPH</option>
                 <option value="Heathrow LHR">Heathrow LHR</option>
                 <option value="Palma de Mallorca PMI">Palma de Mallorca PMI</option>
@@ -47,7 +47,7 @@
         <div class="row-3">
             <div class="departureDateDiv">
                 <p class="departure-date-text">Choose departure date:</p>
-                <input class="departureDate" type="date">
+                <input class="departureDate" type="date" value="2022-12-13">
             </div>
             <div class="departureDateDiv">
                 <p class="return-date-text">Choose return date:</p>
@@ -63,12 +63,10 @@
                 <div class="ticketClass">
                     <select class="ticketChoseClass" name="" id="">
                     <option value="Economy Class">Economy Class</option>
-                    <option value="Business class">Business Class</option>
-                    <option value="First class">First Class</option>
+                    <option value="Business Class">Business Class</option>
+                    <option value="First Class">First Class</option>
                 </select>
                 </div>
-
-
 
 
         </div>
@@ -85,6 +83,7 @@
             <p class="tripDuration"></p>
             <p class="showPassengers"></p>
             <p class="showClass"></p>
+            <p class="showPrice"></p>
 
             <button onclick="payFunc()">Pay</button>
         </div>
